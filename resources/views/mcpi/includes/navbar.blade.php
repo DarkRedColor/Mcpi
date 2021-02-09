@@ -1,58 +1,23 @@
-<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-    <div class="sidebar-sticky">
-        <section>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">
-                        <span class="icon-wrapper text-center">
-                            <i class="fas fa-home"></i>
-                        </span>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('events.index') }}">
-                        <span class="icon-wrapper text-center">
-                            <i class="fas fa-calendar-alt"></i>
-                        </span>
-                        <span>Events</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('places.index') }}">
-                        <span class="icon-wrapper text-center">
-                            <i class="fas fa-map-marked"></i>
-                        </span>
-                        <span>Places</span>
-                    </a>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><h2>MCPI</h2></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+            aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="hidden fixed right-11 px-6 py-6 sm:block">
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">Methods</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown03">
+
+                        <a class="dropdown-item" href="/caesar">Caesar</a>
+
+                    </div>
                 </li>
             </ul>
-        </section>
-
-
-            <section>
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span>Admin</span>
-                </h6>
-                <ul class="nav flex-column mb-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('users.index') }}">
-                            <span class="icon-wrapper text-center">
-                                <i class="fas fa-user"></i>
-                            </span>
-                            <span>Users</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('roles.index') }}">
-                            <span class="icon-wrapper text-center">
-                                <i class="fas fa-user-lock"></i>
-                            </span>
-                            <span>Roles</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-
+        </div>
     </div>
 </nav>

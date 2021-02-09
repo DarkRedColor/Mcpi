@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Mcpi\CaesarController;
+use \App\Http\Controllers\Mcpi\DecryptController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/caesar', [CaesarController::class, 'index']);
+Route::post('/caesar', [CaesarController::class, 'store']);
+
+
