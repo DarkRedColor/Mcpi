@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="023358ab-059f-4c48-806f-bf754c404e56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/LanguageSwitcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ro/message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/laravellocalization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Utm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Utm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mcpi/CaesarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mcpi/CaesarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mcpi/caesar/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mcpi/caesar/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mcpi/includes/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mcpi/includes/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,6 +148,7 @@
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/mcamara/laravel-localization" />
     </include_path>
   </component>
   <component name="ProjectId" id="1o6LEhYRAoHrs6yH3owDAU3jWnX" />
@@ -198,6 +197,7 @@
       <command value="artisan make:controller DecryptController" />
       <command value="artisan serve" />
       <command value="artisan make:middleware LanguageSwitcher" />
+      <command value="composer require mcamara/laravel-localization" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -227,6 +227,7 @@
       <workItem from="1614016970766" duration="1598000" />
       <workItem from="1614104849653" duration="110000" />
       <workItem from="1614105021283" duration="3049000" />
+      <workItem from="1614155331774" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1612903025811</created>
@@ -235,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612903025811</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Try manual localisation">
+      <created>1614155454961</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614155454961</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +270,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Try manual localisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try manual localisation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
