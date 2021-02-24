@@ -4,15 +4,15 @@
 @section('content')
 
     <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pb-1 mb-5 border-bottom">
-        <h1 class="h2">Caesar</h1>
+        <h1 class="h2">{{__('message.test',['des'=>'123455']) }}</h1>
     </div>
     @php
         $datas=session('datas');
-
+//lang_ = app()->getLocale();
+//$dats->{'name_'.$lang}
     @endphp
 
     {!! Form::open(['action' => ['App\Http\Controllers\Mcpi\CaesarController@store']]) !!}
-
     <div class="d-flex justify-content-center align-items-center pb-1 ">
         <div class="d-inline-flex ">
             <div class="form-group">
@@ -27,6 +27,8 @@
             </div>
         </div>
     </div>
+
+
     <br>
     <br>
     <div class="col-md-6">

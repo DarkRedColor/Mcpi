@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Mcpi;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Mcpi\CryptogramaController;
-use function React\Promise\all;
 
 
 class CaesarController extends Controller
@@ -110,13 +108,19 @@ class CaesarController extends Controller
     public function decrypt($alfabet, $message, $key)
     {
         $message_ = [];
+
         foreach ($message as $letter) {
             for ($i = 0; $i < count($alfabet); $i++) {
                 if ($letter == $alfabet[$i]) {
-                    if (($i + $key) >= count($alfabet)) {
-                        $message_[] = $alfabet[abs($i - $key + count($alfabet))];
-                    } else {
-                        $message_[] = $alfabet[abs($i - $key)];
+
+//                    dd($i - $key % count($alfabet));
+                    if ($i - $key % count($alfabet)<0) {
+                        $message_[] = $alfabet[count($alfabet)+($i - $key % count($alfabet))];
+
+                    }
+                    else {
+                        $message_[] = $alfabet[$i - $key % count($alfabet)];
+
                     }
                 }
             }

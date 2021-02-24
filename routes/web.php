@@ -18,7 +18,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/caesar', [CaesarController::class, 'index']);
-Route::post('/caesar', [CaesarController::class, 'store']);
 
+$prefix = request()->segment(1)?request()->segment(1):'';
+if($prefix!='ro'){
+    $prefix='';
+}
+Route::group(['middleware'=>'language', 'prefix' => $prefix],function ()
+{
+    Route::get('/caesar', [CaesarController::class, 'index']);
+    Route::post('/caesar', [CaesarController::class, 'store']);
+    Route::post('/playfare', [CaesarController::class, 'store'])->name('playfare');
+});
 

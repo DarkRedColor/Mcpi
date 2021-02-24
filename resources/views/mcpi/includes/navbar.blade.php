@@ -14,6 +14,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdown03">
 
                         <a class="dropdown-item" href="/caesar">Caesar</a>
+                        <a class="dropdown-item" href="{{route('playfare')}}">Playfire</a>
 
                     </div>
                 </li>
