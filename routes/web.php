@@ -31,15 +31,4 @@ Route::group(['middleware'=>'language', 'prefix' => $prefix],function ()
     Route::post('/caesar', [CaesarController::class, 'store']);
     Route::post('/playfare', [CaesarController::class, 'store'])->name('playfare');
 });
-Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-{
-    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    Route::get('/', function()
-    {
-        return View::make('hello');
-    });
 
-    Route::get('test',function(){
-        return View::make('test');
-    });
-});
