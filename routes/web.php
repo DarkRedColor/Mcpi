@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Mcpi\CaesarController;
 use \App\Http\Controllers\Mcpi\DecryptController;
+use App\Http\Controllers\playfaire\PlayfaireController;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -23,12 +24,13 @@ Route::get('/', function () {
 
 $prefix = request()->segment(1)?request()->segment(1):'';
 if($prefix!='ro'){
+
     $prefix='';
 }
 Route::group(['middleware'=>'language', 'prefix' => $prefix],function ()
 {
     Route::get('/caesar', [CaesarController::class, 'index']);
     Route::post('/caesar', [CaesarController::class, 'store']);
-    Route::post('/playfare', [CaesarController::class, 'store'])->name('playfare');
+    Route::get('/playfare', [PlayfaireController::class, 'playfaire'])->name('playfairGet');
 });
 
